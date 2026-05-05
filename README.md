@@ -1,3 +1,4 @@
+<!-- Google Search Console verification -->
 <meta name="google-site-verification" content="MWzywB1C7S0c4dD5fXrGLuyqcDU_LY80S5ZitNRrmvc" />
 # BashSnippets — Free Copy-Paste Bash Scripts
 
