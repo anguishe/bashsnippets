@@ -1,5 +1,5 @@
 # BashSnippets — Free Copy-Paste Bash Scripts
-
+<meta name="google-site-verification" content="MWzywB1C7S0c4dD5fXrGLuyqcDU_LY80S5ZitNRrmvc" />
 Free bash scripts for Linux users, developers, and sysadmins.
 Every script is tested, explained in plain English, and copy-paste ready.
 No login. No paywall. No bloat.
