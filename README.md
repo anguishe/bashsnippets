@@ -1,124 +1,49 @@
-<!-- Google Search Console verification -->
-<meta name="google-site-verification" content="MWzywB1C7S0c4dD5fXrGLuyqcDU_LY80S5ZitNRrmvc" />
-# BashSnippets — Free Copy-Paste Bash Scripts
+# bash-scripts
 
-Free bash scripts for Linux users, developers, and sysadmins.
-Every script is tested, explained in plain English, and copy-paste ready.
-No login. No paywall. No bloat.
+Free, copy-paste bash scripts for Linux users, developers, and sysadmins.
+Plain-English explanations. No signup. No paywall.
 
-🌐 **Full library with explanations:** [bashsnippets.xyz](https://bashsnippets.xyz)
-📺 **Shorts on YouTube:** [@BashSnippets](https://youtube.com/@BashSnippets)
-🎵 **TikTok:** [@BashSnippets](https://tiktok.com/@BashSnippets)
+📖 **Full library with explanations:** [bashsnippets.xyz/snippets](https://bashsnippets.xyz/snippets/)
+🛠️ **Free interactive tools:** [bashsnippets.xyz/tools](https://bashsnippets.xyz/tools/)
 
 ---
 
-## Scripts
+## Scripts in this repo
 
-| Script | What it does | Full reference |
-|--------|-------------|----------------|
-| [diskcheck.sh](./scripts/diskcheck.sh) | Warns when disk usage crosses a threshold | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/disk-space-warning.html) |
-| [cleanlog.sh](./scripts/cleanlog.sh) | Deletes log files older than N days | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/delete-old-log-files.html) |
-| [uptime.sh](./scripts/uptime.sh) | Checks if a website is up via HTTP status code | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/check-if-website-is-up.html) |
-| [backup.sh](./scripts/backup.sh) | Automated file backup with timestamp | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/automated-file-backup.html) |
-| [sysinfo.sh](./scripts/sysinfo.sh) | Quick system info report | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/quick-system-info-report.html) |
-| [grep-search.sh](./scripts/grep-search.sh) | Search files for text recursively | [bashsnippets.xyz →](https://bashsnippets.xyz/snippets/search-files-for-text-grep.html) |
-
----
-
-## Quick Start
-
-Clone the repo and run any script directly:
-
-```bash
-git clone https://github.com/anguishe/bash-scripts.git
-cd bash-scripts/scripts
-chmod +x diskcheck.sh
-./diskcheck.sh
-```
-
-Or copy-paste any script directly from [bashsnippets.xyz](https://bashsnippets.xyz) — full explanations, flag references, and cron setup included for every script.
+| Script | What it does | Full page |
+|---|---|---|
+| `disk-space-warning.sh` | Check disk usage and alert when threshold exceeded | [Full page →](https://bashsnippets.xyz/snippets/disk-space-warning.html) |
+| `delete-old-log-files.sh` | Find and delete logs older than N days | [Full page →](https://bashsnippets.xyz/snippets/delete-old-log-files.html) |
+| `check-if-website-is-up.sh` | Ping a URL and alert on downtime | [Full page →](https://bashsnippets.xyz/snippets/check-if-website-is-up.html) |
+| `automated-file-backup.sh` | Copy a folder to backup with timestamp | [Full page →](https://bashsnippets.xyz/snippets/automated-file-backup.html) |
+| `kill-a-process.sh` | Kill any process by name using pkill/pgrep | [Full page →](https://bashsnippets.xyz/snippets/kill-a-process.html) |
+| `monitor-cpu-ram-usage.sh` | Log CPU/RAM warnings above threshold | [Full page →](https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage.html) |
+| `restart-service-if-stopped.sh` | Auto-restart a systemd service via cron | [Full page →](https://bashsnippets.xyz/snippets/restart-service-if-stopped.html) |
+| `mysql-database-backup.sh` | Dump, compress, timestamp, and rotate MySQL backups | [Full page →](https://bashsnippets.xyz/snippets/mysql-database-backup.html) |
+| `bash-error-handling.sh` | Boilerplate for `set -euo pipefail` | [Full page →](https://bashsnippets.xyz/snippets/bash-error-handling.html) |
+| `ssh-key-setup-script.sh` | Generate Ed25519 key, set permissions, copy to server | [Full page →](https://bashsnippets.xyz/snippets/ssh-key-setup-script.html) |
+| `file-permissions-security.sh` | Audit world-writable files and fix SSH key perms | [Full page →](https://bashsnippets.xyz/snippets/file-permissions-security.html) |
+| `search-files-for-text-grep.sh` | Recursive grep with filename and line number | [Full page →](https://bashsnippets.xyz/snippets/search-files-for-text-grep.html) |
+| `quick-system-info-report.sh` | One-shot hostname, uptime, RAM, disk, IP report | [Full page →](https://bashsnippets.xyz/snippets/quick-system-info-report.html) |
+| `create-dated-folder.sh` | Create a folder stamped with today's date | [Full page →](https://bashsnippets.xyz/snippets/create-dated-folder.html) |
+| `bash-send-email-alert.sh` | Send email from bash when a threshold is hit | [Full page →](https://bashsnippets.xyz/snippets/bash-send-email-alert.html) |
 
 ---
 
-## Scripts explained
+## Free interactive tools
 
-### diskcheck.sh — Disk Space Warning
-Checks disk usage with `df /` and compares against a threshold you set.
-When usage crosses it, prints a warning. Schedule with cron to run hourly.
-
-```bash
-./diskcheck.sh
-# ⚠ Disk usage at 82% — above 80% threshold. Clean up.
-```
-
-→ [Full explanation + cron setup](https://bashsnippets.xyz/snippets/disk-space-warning.html)
-
-### uptime.sh — Check If Website Is Up
-Uses `curl` to return the HTTP status code of any URL.
-200 = up. Anything else = problem. Runs on cron every 5 minutes.
-
-```bash
-./uptime.sh
-# ✓ https://bashsnippets.xyz is up (HTTP 200)
-```
-
-→ [Full explanation + cron setup](https://bashsnippets.xyz/snippets/check-if-website-is-up.html)
-
-### cleanlog.sh — Delete Old Log Files
-Finds and deletes log files older than a set number of days using `find`.
-Safe, fast, and cron-compatible.
-
-```bash
-./cleanlog.sh
-# ✓ Done. Cleaned 4 files older than 30 days.
-```
-
-→ [Full explanation](https://bashsnippets.xyz/snippets/delete-old-log-files.html)
-
----
-
-## Why plain English?
-
-Every script on bashsnippets.xyz includes:
-- The command broken down flag by flag
-- What each variable does
-- Common mistakes and how to avoid them
-- Cron scheduling examples
-- Copy-paste ready — no modification required to run
-
----
-
-## Adding a new script to cron
-
-Every script in this repo is cron-compatible. General pattern:
-
-```bash
-# Edit your crontab
-crontab -e
-
-# Run diskcheck.sh every hour
-0 * * * * ~/bash-scripts/scripts/diskcheck.sh
-
-# Run uptime.sh every 5 minutes
-*/5 * * * * ~/bash-scripts/scripts/uptime.sh >> ~/uptime.log 2>&1
-```
-
----
-
-## Contributing
-
-Pull requests welcome. All scripts must:
-- Be tested on Ubuntu/Debian
-- Include a comment header explaining what it does
-- Use `#!/bin/bash` shebang
-- Follow the CHECK/CROSS variable convention for output
+| Tool | What it does |
+|---|---|
+| [Bash Boilerplate Generator](https://bashsnippets.xyz/tools/bash-boilerplate-generator.html) | Pick options, inject a snippet, copy a production-ready `.sh` template |
+| [Bash Exit Code Lookup](https://bashsnippets.xyz/tools/bash-exit-code-lookup.html) | Look up exit codes 0–255 with copy-paste error handlers |
+| [Cron Job Builder](https://bashsnippets.xyz/tools/cron-job-builder.html) | Build cron expressions visually with production-safe bash wrappers |
+| [chmod Permissions Builder](https://bashsnippets.xyz/tools/chmod-permissions-builder.html) | Click permissions, get the exact chmod command instantly |
+| [Bash $PATH Debugger](https://bashsnippets.xyz/tools/path-debugger.html) | Paste your $PATH, see what's broken, get a cleaned export line |
 
 ---
 
 ## License
 
-MIT — use these scripts however you want.
+MIT — use freely, attribution appreciated.
 
----
-
-Built by [@BashSnippets](https://bashsnippets.xyz)
+Source: [bashsnippets.xyz](https://bashsnippets.xyz/)
