@@ -1,21 +1,15 @@
 #!/bin/bash
-# ─────────────────────────────────────────────────────────────
-# sysinfo.sh — Quick System Info Report
-# Prints hostname, uptime, RAM usage, disk usage, and IP.
-# Run this first thing after SSH-ing into any new server.
+# Quick System Info Report
+# Prints key stats at a glance.
+# Alias to 'syscheck' in your .bashrc for fast access.
 #
-# Usage:    ./sysinfo.sh
-# Author:   BashSnippets.xyz
-# Full reference + explanation:
-#           https://bashsnippets.xyz/snippets/quick-system-info-report.html
-# ─────────────────────────────────────────────────────────────
+# USAGE: ./syscheck.sh
+# REQUIRES: bash, hostname, uptime, free, df (pre-installed everywhere)
 
-echo "=============================="
-echo " System Info — $(date)"
-echo "=============================="
-echo "Hostname  : $(hostname)"
-echo "Uptime    : $(uptime -p)"
-echo "RAM       : $(free -h | awk '/^Mem:/ {print $3 " used / " $2 " total"}')"
-echo "Disk      : $(df -h / | awk 'NR==2 {print $3 " used / " $2 " total (" $5 ")"}')"
-echo "IP        : $(hostname -I | awk '{print $1}')"
-echo "=============================="
+echo "=== Quick System Check ==="
+echo "Host    : $(hostname)"
+echo "Uptime  : $(uptime -p)"
+echo "RAM     : $(free -h | awk '/Mem/{print $3"/"$2}')"
+echo "Disk /  : $(df -h / | awk 'NR==2{print $3"/"$2}')"
+echo "IP      : $(hostname -I | awk '{print $1}')"
+echo "========================="

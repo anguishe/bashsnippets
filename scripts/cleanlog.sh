@@ -1,18 +1,15 @@
 #!/bin/bash
-# ─────────────────────────────────────────────────────────────
-# cleanlog.sh — Delete Old Log Files
-# Finds and deletes .log files older than N days using find.
-# Always run with -print first to preview before -delete.
+# Delete Old Log Files
+# find /var/log -name "*.log" -mtime +30 -delete removes every log file older than 30 days in one command.
+# Always run with -print instead of -delete first — it previews exactly which files will be removed
+# without touching anything. Swap to -delete when you're satisfied with the list.
+# SAFE: swap -delete for -print to preview first.
 #
-# Usage:    ./cleanlog.sh
-# Schedule: crontab -e → 0 3 * * 0 ~/bash-scripts/scripts/cleanlog.sh
-# Author:   BashSnippets.xyz
-# Full reference + explanation:
-#           https://bashsnippets.xyz/snippets/delete-old-log-files.html
-# ─────────────────────────────────────────────────────────────
+# USAGE: ./cleanlog.sh
+# REQUIRES: bash, find (pre-installed on all Linux/macOS)
 
-LOG_DIR="/var/log/myapp"   # ← change to your log folder
-DAYS=30                    # ← delete files older than this many days
+LOG_DIR="/var/log/myapp"   # ← your log folder
+DAYS=30                    # ← delete logs older than this many days
 
 echo "Cleaning logs older than $DAYS days in $LOG_DIR..."
 

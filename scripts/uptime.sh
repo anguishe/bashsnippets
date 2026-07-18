@@ -1,25 +1,18 @@
 #!/bin/bash
-# ─────────────────────────────────────────────────────────────
-# uptime.sh — Check If Website Is Up
-# Uses curl to return the HTTP status code of any URL.
-# 200 = site is up. Anything else = investigate.
-#
-# Usage:    ./uptime.sh
-# Schedule: crontab -e → */5 * * * * ~/bash-scripts/scripts/uptime.sh >> ~/uptime.log 2>&1
-# Author:   BashSnippets.xyz
-# Full reference + explanation:
-#           https://bashsnippets.xyz/snippets/check-if-website-is-up.html
-# ─────────────────────────────────────────────────────────────
+# Script: uptimecheck.sh
+# Purpose: Alert when a site stops returning HTTP 200 — silent outages cost real traffic
+# Usage: ./uptimecheck.sh
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"
 
-URL="https://bashsnippets.xyz"   # ← change to your site
+URL="https://bashsnippets.xyz"
 
-STATUS=$(curl -o /dev/null -s -w "%{http_code}" "$URL")
+STATUS=$(curl -o /dev/null -s -w "%{http_code}" --max-time 10 "$URL")
 
 if [ "$STATUS" -eq 200 ]; then
   echo "$CHECK $URL is up (HTTP $STATUS)"
 else
-  echo "$CROSS $URL returned HTTP $STATUS — check it"
+  echo "$CROSS WARNING: $URL returned HTTP $STATUS"
 fi

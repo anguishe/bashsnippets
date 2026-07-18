@@ -1,18 +1,13 @@
 #!/bin/bash
-# ─────────────────────────────────────────────────────────────
-# grep-search.sh — Search Files for Text Recursively
-# Uses grep -rn to search every file in a directory
-# and return each match with filename and line number.
+# Search files for text — grep reference
+# Replace KEYWORD and SEARCH_DIR with your values
 #
-# Usage:    ./grep-search.sh
-# Author:   BashSnippets.xyz
-# Full reference + flags guide:
-#           https://bashsnippets.xyz/snippets/search-files-for-text-grep.html
-# ─────────────────────────────────────────────────────────────
+# USAGE: ./grep-search.sh
+# REQUIRES: grep (pre-installed on Linux/macOS)
 
-KEYWORD="TODO"           # ← what to search for
-SEARCH_DIR="$HOME"       # ← where to search
-FILE_TYPE="*.txt"        # ← file types to include
+KEYWORD="TODO"          # ← what to search for
+SEARCH_DIR="$HOME"    # ← where to search
+FILE_TYPE="*.txt"     # ← file types to include
 
 echo "Searching for '$KEYWORD' in $SEARCH_DIR..."
 echo "────────────────────────────────────────"
