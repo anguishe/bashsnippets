@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-arrays
 # Script: health-check.sh
 # Purpose: Without collecting failures, the script stops at the first dead service and hides the others.
 # Usage: ./health-check.sh

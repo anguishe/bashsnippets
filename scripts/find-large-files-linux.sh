@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/find-large-files-linux
 # Script: find-large-files.sh
 # Purpose: Identify the largest files and directories consuming disk space
 # Usage: sudo ./find-large-files.sh [directory] [min-size]

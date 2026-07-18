@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-retry-with-backoff
 # Script: retry.sh
 # Purpose: Survive transient failures (a flaky network, a service still booting)
 #          instead of dying on the first error

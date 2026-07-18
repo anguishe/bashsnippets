@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/search-files-for-text-grep
 # Search files for text — grep reference
 # Replace KEYWORD and SEARCH_DIR with your values
 #

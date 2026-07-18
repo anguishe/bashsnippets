@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/check-if-website-is-up
 # Script: uptimecheck.sh
 # Purpose: Alert when a site stops returning HTTP 200 — silent outages cost real traffic
 # Usage: ./uptimecheck.sh

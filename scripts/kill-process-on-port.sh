@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/kill-process-on-port
 # Script: kill-port.sh
 # Purpose: Find and kill the process occupying a specific network port
 # Usage: ./kill-port.sh <port-number>

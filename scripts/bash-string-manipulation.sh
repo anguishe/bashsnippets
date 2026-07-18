@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-string-manipulation
 # Script: normalize-filename.sh
 # Purpose: Inconsistent filenames (spaces, mixed case, date suffixes) break downstream globbing and sorting.
 # Usage: ./normalize-filename.sh "/path/to/My Report_20240310.TXT"

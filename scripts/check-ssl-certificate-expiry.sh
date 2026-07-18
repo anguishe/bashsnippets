@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/check-ssl-certificate-expiry
 # Script: check-ssl-expiry.sh
 # Purpose: Alert before SSL certificate expires — silent expiry takes HTTPS offline
 # Usage: ./check-ssl-expiry.sh

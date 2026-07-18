@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/quick-system-info-report
 # Quick System Info Report
 # Prints key stats at a glance.
 # Alias to 'syscheck' in your .bashrc for fast access.

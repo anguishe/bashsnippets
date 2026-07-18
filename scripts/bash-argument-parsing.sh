@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-argument-parsing
 # Script: flexible-backup.sh
 # Purpose: Without required-arg validation, a missing --source backs up an empty path silently.
 # Usage: ./flexible-backup.sh --source DIR --dest DIR [--days N] [--dry-run]

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/docker-prune-cleanup
 # Script: docker-prune.sh
 # Purpose: Reclaim disk space from Docker garbage — images, containers, volumes, build cache
 # Usage: ./docker-prune.sh [--force]

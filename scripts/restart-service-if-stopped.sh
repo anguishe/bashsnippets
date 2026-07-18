@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/restart-service-if-stopped
 
 CHECK="✓"
 CROSS="✗"

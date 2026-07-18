@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/create-dated-folder
 # Create a dated folder with an optional name
 # USAGE: ./mkdate.sh [optional-name]
 # EXAMPLE: ./mkdate.sh deployment → creates 2026-05-03_deployment

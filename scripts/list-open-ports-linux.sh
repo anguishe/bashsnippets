@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/list-open-ports-linux
 # Script: list-open-ports.sh
 # Purpose: Audit every port your server listens on — find forgotten services before attackers do
 # Usage: sudo ./list-open-ports.sh

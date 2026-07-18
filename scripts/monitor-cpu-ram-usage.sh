@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage
 
 CHECK="✓"
 CROSS="✗"

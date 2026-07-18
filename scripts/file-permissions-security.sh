@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/file-permissions-security
 # permissions-audit.sh — BashSnippets.xyz
 # Audit and report dangerous file permissions
 

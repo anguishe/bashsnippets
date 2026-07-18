@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/delete-old-log-files
 # Delete Old Log Files
 # find /var/log -name "*.log" -mtime +30 -delete removes every log file older than 30 days in one command.
 # Always run with -print instead of -delete first — it previews exactly which files will be removed

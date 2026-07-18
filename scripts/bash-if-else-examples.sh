@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-if-else-examples
 # Script: disk-if-else.sh
 # Purpose: Classify disk usage into critical, warning, or OK — three-branch if/elif/else
 # Usage: ./disk-if-else.sh

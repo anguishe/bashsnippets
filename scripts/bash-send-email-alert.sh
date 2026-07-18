@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-send-email-alert
 
 CHECK="✓"
 CROSS="✗"

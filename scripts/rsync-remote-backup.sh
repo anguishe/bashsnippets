@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/rsync-remote-backup
 # Script: rsync-backup.sh
 # Purpose: Push incremental backups to a remote server over SSH
 # Usage: ./rsync-backup.sh

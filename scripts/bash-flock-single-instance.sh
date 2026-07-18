@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-flock-single-instance
 # Script: backup-with-lock.sh
 # Purpose: Stop a cron job from overlapping itself when one run runs long
 # Usage: backup-with-lock.sh   (self-locking — safe to call from any */N cron)

@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/disk-space-warning
 # diskcheck.sh — warn when disk usage exceeds a threshold
 set -euo pipefail
 

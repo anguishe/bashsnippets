@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-timeout-command
 # Script: bounded-dump.sh
 # Purpose: Stop a hung command from running forever and jamming the cron slot
 # Usage: bounded-dump.sh

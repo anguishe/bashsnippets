@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-read-file-line-by-line
 # Script: check-hosts.sh
 # Purpose: ping every host in a list, including a newline-less last line
 # Usage: ./check-hosts.sh hosts.txt

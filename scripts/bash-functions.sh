@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-functions
 # Script: bashlib.sh
 # Purpose: Shared functions so logging and dependency checks live in exactly one place.
 # Usage: source bashlib.sh

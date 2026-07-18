@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-for-loop-examples
 # Script: backup-exports.sh
 # Purpose: copy export files to a backup dir without losing ones with spaces
 # Usage: ./backup-exports.sh

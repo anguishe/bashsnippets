@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/automated-file-backup
 # Script: backup.sh
 # Purpose: Prevent data loss from disk failure or accidental deletion with timestamped backups
 # Usage: ./backup.sh

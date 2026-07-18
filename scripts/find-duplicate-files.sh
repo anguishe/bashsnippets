@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/find-duplicate-files
 # Script: find-dupes.sh
 # Purpose: Recover disk space lost to byte-for-byte duplicate files across directories
 # Usage: ./find-dupes.sh [directory]
