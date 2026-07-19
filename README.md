@@ -1,5 +1,7 @@
 # bash/snippets
 
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg) ![ShellCheck: clean](https://img.shields.io/badge/ShellCheck-clean-brightgreen.svg) ![Explained at bashsnippets.xyz](https://img.shields.io/badge/explained%20at-bashsnippets.xyz-blue)
+
 I got tired of digging the same scripts out of my own notes every time a disk filled up, a service died, or a cron job overlapped itself into an outage. This repo is those scripts: tested, copy-paste bash for real Linux boxes and cron jobs, each one explained line-by-line at [bashsnippets.xyz](https://bashsnippets.xyz). No login, no paywall, no newsletter wall — clone it, read it, run it.
 
 **Every script in this repo:**
