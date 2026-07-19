@@ -19,7 +19,7 @@ grep -rn "$KEYWORD" "$SEARCH_DIR" \
 
 COUNT=$(grep -rc "$KEYWORD" "$SEARCH_DIR" \
   --include="$FILE_TYPE" 2>/dev/null \
-  | grep -v ":0$" | wc -l)
+  | grep -cv ":0$")
 
 echo "────────────────────────────────────────"
 echo "Found in $COUNT file(s)"

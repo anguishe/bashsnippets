@@ -6,7 +6,6 @@ CROSS="✗"
 
 # --- Configuration ---
 KEY_TYPE="ed25519"               # Recommended: ed25519 (modern) or rsa (legacy)
-KEY_BITS="4096"                  # Only used for RSA keys
 KEY_COMMENT="$(whoami)@$(hostname)-$(date '+%Y%m%d')"
 KEY_FILE="$HOME/.ssh/id_${KEY_TYPE}"
 REMOTE_USER=""                   # Set to: user@server-ip to auto-copy key

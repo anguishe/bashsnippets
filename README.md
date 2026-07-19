@@ -7,7 +7,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 - runs `set -euo pipefail` — stops on the first error instead of marching past it
 - uses named variables for thresholds and paths — no magic numbers to guess at
 - comments explain *why* a line exists, not *what* it does
-- is copied verbatim from the tested version on the site — what you read here is what runs there
+- is **ShellCheck-clean** (`shellcheck -S style`, zero findings) and mirrors the tested version explained line-by-line on the site
 
 ## Scripts
 

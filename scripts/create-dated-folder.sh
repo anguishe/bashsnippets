@@ -10,4 +10,4 @@ FULL="${DATE}_${NAME}"
 
 mkdir -p "$FULL"
 echo "✓ Created: $FULL"
-cd "$FULL"
+cd "$FULL" || exit 1

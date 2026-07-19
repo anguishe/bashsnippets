@@ -6,7 +6,6 @@
 set -euo pipefail
 
 CHECK="✓"
-CROSS="✗"
 
 greet_all() {
   echo "$CHECK got $# argument(s)"

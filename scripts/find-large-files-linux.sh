@@ -6,7 +6,6 @@
 set -euo pipefail
 
 CHECK="✓"
-CROSS="✗"
 
 TARGET_DIR="${1:-/}"
 MIN_SIZE="${2:-500M}"

@@ -18,8 +18,8 @@ fi
 echo "Scanning for duplicates in $TARGET..."
 echo ""
 
-find "$TARGET" -type f \
-  | xargs -r md5sum 2>/dev/null \
+find "$TARGET" -type f -print0 \
+  | xargs -0 -r md5sum 2>/dev/null \
   | sort \
   | awk 'seen[$1]++'
 
