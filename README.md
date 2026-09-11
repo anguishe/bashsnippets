@@ -60,7 +60,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 
 ## The bashlib starter
 
-Ten functions to `source` into every script, so each one starts with the safety the scripts above repeat by hand:
+Ten functions to `source` into every script, so each one starts with the safety the scripts above repeat by hand. Explained function by function at [bashsnippets.xyz/snippets/bashlib-starter](https://bashsnippets.xyz/snippets/bashlib-starter).
 
 - `enable_strict_traps` — `set -Eeuo pipefail` plus an ERR trap that names the failing command and line (the `-E` makes it fire inside functions)
 - `register_temp`, `make_temp_file`, `make_temp_dir` — cleanup that runs on every exit path: success, `exit N`, a `set -e` abort, Ctrl-C, SIGTERM

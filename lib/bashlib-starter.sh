@@ -1,5 +1,5 @@
 #!/bin/bash
-# Explained line-by-line: https://github.com/anguishe/bashsnippets#the-bashlib-starter
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bashlib-starter
 # Script: bashlib-starter.sh — ten functions to source into every script
 # Purpose: Without it every script re-invents (or forgets) strict mode, an ERR trap
 #          that names the failing line, cleanup on every exit path, a lock and a timeout
