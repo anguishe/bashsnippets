@@ -6,7 +6,7 @@
 #          unless every host did.
 # Usage: ./ssh-run-remote-commands.sh 'command' host1 [host2 ...]
 #        ./ssh-run-remote-commands.sh 'command'          (hosts read from $HOSTS_FILE)
-# Tested: Kali 2026.3 (bash 5.3), Ubuntu 22.04 LTS, Fedora 39
+# Tested: Kali 2026.3 (bash 5.3)
 set -euo pipefail
 
 CHECK="✓"

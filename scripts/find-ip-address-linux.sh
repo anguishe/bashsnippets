@@ -4,7 +4,7 @@
 #          you out or ships data to the wrong host — this prints every address
 #          that matters on one screen so you copy from a report, not a guess.
 # Usage: ./find-ip-address-linux.sh [interface]   (default: the one holding the default route)
-# Tested: Kali 2026.3 (bash 5.3), Ubuntu 22.04 LTS, Fedora 39
+# Tested: Kali 2026.3 (bash 5.3)
 set -euo pipefail
 
 CHECK="✓"
