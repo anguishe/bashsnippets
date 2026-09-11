@@ -51,6 +51,12 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`rsync-remote-backup.sh`](scripts/rsync-remote-backup.sh) | A local-only backup dies with the machine. | [Read](https://bashsnippets.xyz/snippets/rsync-remote-backup) |
 | [`search-files-for-text-grep.sh`](scripts/search-files-for-text-grep.sh) | Hunting a pattern by opening files by hand wastes time. | [Read](https://bashsnippets.xyz/snippets/search-files-for-text-grep) |
 | [`ssh-key-setup-script.sh`](scripts/ssh-key-setup-script.sh) | Password SSH invites brute-force attacks on any exposed server. | [Read](https://bashsnippets.xyz/snippets/ssh-key-setup-script) |
+| [`find-ip-address-linux.sh`](scripts/find-ip-address-linux.sh) | A firewall rule or backup target built on the wrong IP locks you out or ships data elsewhere. | [Read](https://bashsnippets.xyz/snippets/find-ip-address-linux) |
+| [`bash-environment-variables.sh`](scripts/bash-environment-variables.sh) | A variable set but never exported is invisible to every child process — cron runs with an empty token. | [Read](https://bashsnippets.xyz/snippets/bash-environment-variables) |
+| [`ssh-run-remote-commands.sh`](scripts/ssh-run-remote-commands.sh) | A loop that ignores ssh exit codes reports done while three hosts never changed. | [Read](https://bashsnippets.xyz/snippets/ssh-run-remote-commands) |
+| [`ports-audit.sh`](scripts/ports-audit.sh) | A new listener appears on a server and nobody notices until it is in an incident report. | [Read](https://bashsnippets.xyz/snippets/ports-audit) |
+| [`service-watchdog.sh`](scripts/service-watchdog.sh) | A hung service passes `is-active` and stays broken; a naive restart loop fires 60 alerts an hour. | [Read](https://bashsnippets.xyz/snippets/service-watchdog) |
+| [`log-retention-cleanup.sh`](scripts/log-retention-cleanup.sh) | Dated backup folders nobody rotates fill the disk in the directories logrotate does not own. | [Read](https://bashsnippets.xyz/snippets/log-retention-cleanup) |
 
 ## Explained on the site
 
