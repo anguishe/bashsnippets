@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/ssh-run-remote-commands
 # Script: ssh-run-remote-commands.sh
 # Purpose: A loop that runs one command over SSH on twenty hosts and ignores
 #          the exit codes reports "done" while three boxes never got the

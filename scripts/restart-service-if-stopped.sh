@@ -1,5 +1,6 @@
 #!/bin/bash
 # Explained line-by-line: https://bashsnippets.xyz/snippets/restart-service-if-stopped
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"

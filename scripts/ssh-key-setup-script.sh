@@ -1,5 +1,6 @@
 #!/bin/bash
 # Explained line-by-line: https://bashsnippets.xyz/snippets/ssh-key-setup-script
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"

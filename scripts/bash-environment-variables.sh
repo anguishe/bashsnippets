@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/bash-environment-variables
 # Script: bash-environment-variables.sh
 # Purpose: A variable that was set but never exported is invisible to every
 #          child process — the deploy script reads an empty API_TOKEN and runs

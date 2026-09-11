@@ -4,7 +4,6 @@
 # Purpose: Generate a CSV without ever exposing a half-written file to
 #          downstream consumers — and without littering /tmp on crashes
 # Usage: ./nightly-report.sh /var/exports/report.csv
-# Tested: Ubuntu 22.04 LTS, Fedora 39, macOS Ventura
 set -euo pipefail
 
 CHECK="✓"

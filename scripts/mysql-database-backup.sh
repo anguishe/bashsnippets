@@ -1,5 +1,6 @@
 #!/bin/bash
 # Explained line-by-line: https://bashsnippets.xyz/snippets/mysql-database-backup
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"

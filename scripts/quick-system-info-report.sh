@@ -6,6 +6,7 @@
 #
 # USAGE: ./syscheck.sh
 # REQUIRES: bash, hostname, uptime, free, df (pre-installed everywhere)
+set -euo pipefail
 
 echo "=== Quick System Check ==="
 echo "Host    : $(hostname)"

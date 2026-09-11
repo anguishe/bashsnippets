@@ -1,4 +1,5 @@
 #!/bin/bash
+# Explained line-by-line: https://bashsnippets.xyz/snippets/find-ip-address-linux
 # Script: find-ip-address-linux.sh
 # Purpose: A firewall rule or a backup destination built on the wrong IP locks
 #          you out or ships data to the wrong host — this prints every address

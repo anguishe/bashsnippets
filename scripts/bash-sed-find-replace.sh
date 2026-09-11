@@ -4,7 +4,6 @@
 # Purpose: Bulk find-and-replace that dry-runs first — because an unanchored
 #          sed -i across a tree rewrites substrings you never looked at
 # Usage: ./safe-replace.sh 'pattern' 'replacement' [path] [--apply]
-# Tested: Ubuntu 22.04 LTS, Fedora 39, macOS Ventura
 set -euo pipefail
 
 CHECK="✓"

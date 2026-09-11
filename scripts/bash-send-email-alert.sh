@@ -1,5 +1,6 @@
 #!/bin/bash
 # Explained line-by-line: https://bashsnippets.xyz/snippets/bash-send-email-alert
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"
@@ -24,7 +25,7 @@ Disk usage on / is at ${USAGE}% as of ${DATE}.
 Threshold: ${THRESHOLD}%
 
 Top disk consumers:
-$(du -sh /* 2>/dev/null | sort -rh | head -5)
+$(du -sh /* 2>/dev/null | sort -rh | head -5 || true)
 
 -- BashSnippets monitor"
 

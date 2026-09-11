@@ -19,10 +19,11 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`bash-argument-parsing.sh`](scripts/bash-argument-parsing.sh) | A flag read as a value deploys to nowhere, silently. | [Read](https://bashsnippets.xyz/snippets/bash-argument-parsing) |
 | [`bash-arrays.sh`](scripts/bash-arrays.sh) | One space in a list item silently splits it in two. | [Read](https://bashsnippets.xyz/snippets/bash-arrays) |
 | [`bash-curl-api-requests.sh`](scripts/bash-curl-api-requests.sh) | curl exits 0 on HTTP 500, so a failed call poisons everything downstream. | [Read](https://bashsnippets.xyz/snippets/bash-curl-api-requests) |
+| [`bash-environment-variables.sh`](scripts/bash-environment-variables.sh) | A variable set but never exported is invisible to every child process — cron runs with an empty token. | [Read](https://bashsnippets.xyz/snippets/bash-environment-variables) |
 | [`bash-flock-single-instance.sh`](scripts/bash-flock-single-instance.sh) | Overlapping cron runs stack copies until the box falls over. | [Read](https://bashsnippets.xyz/snippets/bash-flock-single-instance) |
 | [`bash-for-loop-examples.sh`](scripts/bash-for-loop-examples.sh) | Looping over `ls` silently skips filenames with spaces. | [Read](https://bashsnippets.xyz/snippets/bash-for-loop-examples) |
-| [`bash-functions.sh`](scripts/bash-functions.sh) | `return` sets an exit code, not a string — data lost. | [Read](https://bashsnippets.xyz/snippets/bash-functions) |
 | [`bash-functions-arguments.sh`](scripts/bash-functions-arguments.sh) | A reused variable clobbers the caller and deletes the wrong dir. | [Read](https://bashsnippets.xyz/snippets/bash-functions-arguments) |
+| [`bash-functions.sh`](scripts/bash-functions.sh) | `return` sets an exit code, not a string — data lost. | [Read](https://bashsnippets.xyz/snippets/bash-functions) |
 | [`bash-if-else-examples.sh`](scripts/bash-if-else-examples.sh) | The wrong test operator fails logic silently on odd input. | [Read](https://bashsnippets.xyz/snippets/bash-if-else-examples) |
 | [`bash-parse-json-jq.sh`](scripts/bash-parse-json-jq.sh) | grep on JSON breaks the moment the API reformats — and fails silently. | [Read](https://bashsnippets.xyz/snippets/bash-parse-json-jq) |
 | [`bash-read-file-line-by-line.sh`](scripts/bash-read-file-line-by-line.sh) | A missing final newline silently drops the last line. | [Read](https://bashsnippets.xyz/snippets/bash-read-file-line-by-line) |
@@ -41,22 +42,49 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`docker-prune-cleanup.sh`](scripts/docker-prune-cleanup.sh) | Dead containers, images, and volumes eat disk unnoticed. | [Read](https://bashsnippets.xyz/snippets/docker-prune-cleanup) |
 | [`file-permissions-security.sh`](scripts/file-permissions-security.sh) | World-writable files let a compromised script overwrite your app. | [Read](https://bashsnippets.xyz/snippets/file-permissions-security) |
 | [`find-duplicate-files.sh`](scripts/find-duplicate-files.sh) | Duplicate copies waste gigabytes silently across archives. | [Read](https://bashsnippets.xyz/snippets/find-duplicate-files) |
+| [`find-ip-address-linux.sh`](scripts/find-ip-address-linux.sh) | A firewall rule or backup target built on the wrong IP locks you out or ships data elsewhere. | [Read](https://bashsnippets.xyz/snippets/find-ip-address-linux) |
 | [`find-large-files-linux.sh`](scripts/find-large-files-linux.sh) | Disk hits 100% and you can't find the culprit fast. | [Read](https://bashsnippets.xyz/snippets/find-large-files-linux) |
 | [`kill-process-on-port.sh`](scripts/kill-process-on-port.sh) | `EADDRINUSE` — something squats your port and blocks startup. | [Read](https://bashsnippets.xyz/snippets/kill-process-on-port) |
 | [`list-open-ports-linux.sh`](scripts/list-open-ports-linux.sh) | Unknown listening ports are the blind spot in a security audit. | [Read](https://bashsnippets.xyz/snippets/list-open-ports-linux) |
+| [`log-retention-cleanup.sh`](scripts/log-retention-cleanup.sh) | Dated backup folders nobody rotates fill the disk in the directories logrotate does not own. | [Read](https://bashsnippets.xyz/snippets/log-retention-cleanup) |
 | [`monitor-cpu-ram-usage.sh`](scripts/monitor-cpu-ram-usage.sh) | A runaway process pins CPU until the server stops responding. | [Read](https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage) |
 | [`mysql-database-backup.sh`](scripts/mysql-database-backup.sh) | A mistaken `DROP TABLE` destroys data with no undo. | [Read](https://bashsnippets.xyz/snippets/mysql-database-backup) |
+| [`ports-audit.sh`](scripts/ports-audit.sh) | A new listener appears on a server and nobody notices until it is in an incident report. | [Read](https://bashsnippets.xyz/snippets/ports-audit) |
 | [`quick-system-info-report.sh`](scripts/quick-system-info-report.sh) | Guessing server state during an outage costs response time. | [Read](https://bashsnippets.xyz/snippets/quick-system-info-report) |
 | [`restart-service-if-stopped.sh`](scripts/restart-service-if-stopped.sh) | A crashed service stays down for hours without a watchdog. | [Read](https://bashsnippets.xyz/snippets/restart-service-if-stopped) |
 | [`rsync-remote-backup.sh`](scripts/rsync-remote-backup.sh) | A local-only backup dies with the machine. | [Read](https://bashsnippets.xyz/snippets/rsync-remote-backup) |
 | [`search-files-for-text-grep.sh`](scripts/search-files-for-text-grep.sh) | Hunting a pattern by opening files by hand wastes time. | [Read](https://bashsnippets.xyz/snippets/search-files-for-text-grep) |
-| [`ssh-key-setup-script.sh`](scripts/ssh-key-setup-script.sh) | Password SSH invites brute-force attacks on any exposed server. | [Read](https://bashsnippets.xyz/snippets/ssh-key-setup-script) |
-| [`find-ip-address-linux.sh`](scripts/find-ip-address-linux.sh) | A firewall rule or backup target built on the wrong IP locks you out or ships data elsewhere. | [Read](https://bashsnippets.xyz/snippets/find-ip-address-linux) |
-| [`bash-environment-variables.sh`](scripts/bash-environment-variables.sh) | A variable set but never exported is invisible to every child process — cron runs with an empty token. | [Read](https://bashsnippets.xyz/snippets/bash-environment-variables) |
-| [`ssh-run-remote-commands.sh`](scripts/ssh-run-remote-commands.sh) | A loop that ignores ssh exit codes reports done while three hosts never changed. | [Read](https://bashsnippets.xyz/snippets/ssh-run-remote-commands) |
-| [`ports-audit.sh`](scripts/ports-audit.sh) | A new listener appears on a server and nobody notices until it is in an incident report. | [Read](https://bashsnippets.xyz/snippets/ports-audit) |
 | [`service-watchdog.sh`](scripts/service-watchdog.sh) | A hung service passes `is-active` and stays broken; a naive restart loop fires 60 alerts an hour. | [Read](https://bashsnippets.xyz/snippets/service-watchdog) |
-| [`log-retention-cleanup.sh`](scripts/log-retention-cleanup.sh) | Dated backup folders nobody rotates fill the disk in the directories logrotate does not own. | [Read](https://bashsnippets.xyz/snippets/log-retention-cleanup) |
+| [`ssh-key-setup-script.sh`](scripts/ssh-key-setup-script.sh) | Password SSH invites brute-force attacks on any exposed server. | [Read](https://bashsnippets.xyz/snippets/ssh-key-setup-script) |
+| [`ssh-run-remote-commands.sh`](scripts/ssh-run-remote-commands.sh) | A loop that ignores ssh exit codes reports done while three hosts never changed. | [Read](https://bashsnippets.xyz/snippets/ssh-run-remote-commands) |
+
+## The bashlib starter
+
+Ten functions to `source` into every script, so each one starts with the safety the scripts above repeat by hand:
+
+- `enable_strict_traps` — `set -Eeuo pipefail` plus an ERR trap that names the failing command and line (the `-E` makes it fire inside functions)
+- `register_temp`, `make_temp_file`, `make_temp_dir` — cleanup that runs on every exit path: success, `exit N`, a `set -e` abort, Ctrl-C, SIGTERM
+- `acquire_lock` — one running copy at a time, stale locks from dead PIDs reclaimed
+- `run_with_timeout` — a hung command is killed (exit 124) instead of hanging the script and its lock
+- `retry` — exponential backoff that returns the last exit code
+- `log`, `die`, `require_cmd`
+
+```bash
+curl -fsSLO https://raw.githubusercontent.com/anguishe/bashsnippets/main/lib/bashlib-starter.sh
+```
+
+```bash
+#!/bin/bash
+source "$(dirname "${BASH_SOURCE[0]}")/bashlib-starter.sh"
+enable_strict_traps
+require_cmd curl timeout
+acquire_lock
+make_temp_file tmp
+run_with_timeout 30 curl -fsS https://example.com -o "$tmp"
+log INFO "fetched $(wc -c < "$tmp") bytes"
+```
+
+Every function is exercised on its failure path by [`lib/bashlib-starter.test.sh`](lib/bashlib-starter.test.sh): `bash lib/bashlib-starter.test.sh` ends in `✓ all checks passed`. The function names match the [Production Bash Toolkit](https://bashsnippets.xyz/starter-kit)'s `bashlib.sh`; the reasoning behind strict mode and the ERR trap is in the [safe bash script template](https://bashsnippets.xyz/guides/safe-bash-script-template) guide.
 
 ## Explained on the site
 

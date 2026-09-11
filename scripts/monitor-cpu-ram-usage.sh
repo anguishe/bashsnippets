@@ -1,5 +1,6 @@
 #!/bin/bash
 # Explained line-by-line: https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage
+set -euo pipefail
 
 CHECK="✓"
 CROSS="✗"
@@ -10,10 +11,12 @@ LOG_FILE="/var/log/resource-monitor.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 # --- CPU Usage ---
-CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1 | cut -d',' -f1 | xargs printf "%.0f")
+CPU=$(top -bn1 | grep "Cpu(s)" | awk '{print $2}' | cut -d'%' -f1 | cut -d',' -f1 | xargs printf "%.0f" || true)
+[ -n "$CPU" ] || { echo "$CROSS could not parse CPU from top output (non-English locale?)"; exit 1; }
 
 # --- RAM Usage ---
-RAM=$(free | awk '/Mem:/ {printf "%.0f", $3/$2*100}')
+RAM=$(free | awk '/Mem:/ {printf "%.0f", $3/$2*100}' || true)
+[ -n "$RAM" ] || { echo "$CROSS could not parse RAM from free output"; exit 1; }
 
 echo "[$DATE] CPU: ${CPU}% | RAM: ${RAM}%"
 

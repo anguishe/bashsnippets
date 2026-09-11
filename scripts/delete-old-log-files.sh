@@ -8,6 +8,7 @@
 #
 # USAGE: ./cleanlog.sh
 # REQUIRES: bash, find (pre-installed on all Linux/macOS)
+set -euo pipefail
 
 LOG_DIR="/var/log/myapp"   # ← your log folder
 DAYS=30                    # ← delete logs older than this many days
