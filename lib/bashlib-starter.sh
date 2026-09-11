@@ -8,7 +8,7 @@
 #   enable_strict_traps                        # set -Eeuo pipefail + ERR/EXIT traps
 #   require_cmd curl timeout                   # fail before doing any work
 #   acquire_lock                               # one running copy at a time
-#   make_temp_file tmp                         # $tmp is deleted on every exit path
+#   tmp="$(make_temp_file)"                    # deleted on every exit path
 #   run_with_timeout 30 curl -fsS "$URL" -o "$tmp"
 #   retry 5 2 -- rsync -a "$tmp" backup:/srv/
 #   log INFO "done"
@@ -30,6 +30,10 @@ fi
 _BASHLIB_STARTER_LOADED=1
 
 _BL_TEMP_ITEMS=()
+# tmp="$(make_temp_file)" runs make_temp_file in a subshell, and an array change
+# made there dies with it. So enable_strict_traps also creates this private
+# registry file: a path appended to a file survives the subshell.
+_BL_TEMP_REGISTRY=""
 
 # 1. log LEVEL MESSAGE... — timestamped line on stderr, plus $LOG_FILE if set.
 #    stderr keeps a function's stdout clean for "$(capture)".
@@ -73,6 +77,9 @@ require_cmd() {
 #    not fire inside functions, and a failure one level down exits with no message.
 enable_strict_traps() {
   set -Eeuo pipefail
+  if [[ -z "$_BL_TEMP_REGISTRY" ]]; then
+    _BL_TEMP_REGISTRY="$(mktemp "${TMPDIR:-/tmp}/bashlib.reg.XXXXXX")" || die "mktemp failed"
+  fi
   trap '_bl_on_err "$?" "$LINENO" "$BASH_COMMAND"' ERR
   trap '_bl_cleanup' EXIT
 }
@@ -85,7 +92,15 @@ _bl_on_err() {
 # It never calls exit, so the script's own exit status passes through untouched.
 _bl_cleanup() {
   local item
-  for item in ${_BL_TEMP_ITEMS[@]+"${_BL_TEMP_ITEMS[@]}"}; do
+  local -a items=()
+  items=(${_BL_TEMP_ITEMS[@]+"${_BL_TEMP_ITEMS[@]}"})
+  if [[ -n "$_BL_TEMP_REGISTRY" && -f "$_BL_TEMP_REGISTRY" ]]; then
+    while IFS= read -r -d '' item; do
+      items+=("$item")
+    done < "$_BL_TEMP_REGISTRY"
+    items+=("$_BL_TEMP_REGISTRY")
+  fi
+  for item in ${items[@]+"${items[@]}"}; do
     if [[ -e "$item" ]]; then
       rm -rf -- "$item" || true
     fi
@@ -93,27 +108,39 @@ _bl_cleanup() {
 }
 
 # 5. register_temp PATH — delete PATH (file or directory) when the script exits.
+#    Safe to call inside $( ).
 register_temp() {
   _BL_TEMP_ITEMS+=("$1")
+  if [[ -n "$_BL_TEMP_REGISTRY" ]]; then
+    printf '%s\0' "$1" >> "$_BL_TEMP_REGISTRY"
+  fi
 }
 
-# 6. make_temp_file VAR — create a private temp file, put its path in VAR, and
-#    delete it on exit. It takes a variable name on purpose: tmp=$(make_temp_file)
-#    would register the cleanup inside a subshell, and the registration would die
-#    with that subshell.
+# 6. make_temp_file [VAR] — create a private temp file that is deleted on exit.
+#    tmp="$(make_temp_file)" prints the path; make_temp_file tmp sets $tmp directly.
+# shellcheck disable=SC2120  # the variable-name argument is optional
 make_temp_file() {
   local _bl_path
   _bl_path="$(mktemp "${TMPDIR:-/tmp}/bashlib.XXXXXX")" || die "mktemp failed"
   register_temp "$_bl_path"
-  printf -v "$1" '%s' "$_bl_path"
+  if [[ -n "${1:-}" ]]; then
+    printf -v "$1" '%s' "$_bl_path"
+  else
+    printf '%s\n' "$_bl_path"
+  fi
 }
 
-# 7. make_temp_dir VAR — the same, for a directory removed whole on exit.
+# 7. make_temp_dir [VAR] — the same, for a directory removed whole on exit.
+# shellcheck disable=SC2120  # the variable-name argument is optional
 make_temp_dir() {
   local _bl_path
   _bl_path="$(mktemp -d "${TMPDIR:-/tmp}/bashlib.XXXXXX")" || die "mktemp -d failed"
   register_temp "$_bl_path"
-  printf -v "$1" '%s' "$_bl_path"
+  if [[ -n "${1:-}" ]]; then
+    printf -v "$1" '%s' "$_bl_path"
+  else
+    printf '%s\n' "$_bl_path"
+  fi
 }
 
 # 8. acquire_lock [LOCKDIR] — allow one running copy. mkdir is atomic, so two

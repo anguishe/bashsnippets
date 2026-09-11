@@ -58,6 +58,18 @@ check "temp file removed after a set -e abort" gone "$T"
 check "temp dir removed after a set -e abort" gone "$D"
 check "exit status of the failure preserved (1)" test "$RC" -eq 1
 
+# 6–7 in a $( ) subshell: the registration has to survive the subshell
+run_case tmp_subshell "enable_strict_traps
+f=\"\$(make_temp_file)\"
+d=\"\$(make_temp_dir)\"
+[[ -e \"\$f\" && -d \"\$d\" ]] || exit 9
+echo \"\$f \$d \$_BL_TEMP_REGISTRY\" > '$WORK/tmp_subshell.paths'"
+read -r F D REG < "$WORK/tmp_subshell.paths"
+check "\$(make_temp_file) path exists while the script runs" test "$RC" -eq 0
+check "\$(make_temp_file) file removed on exit" gone "$F"
+check "\$(make_temp_dir) dir removed on exit" gone "$D"
+check "private registry file removed on exit" gone "$REG"
+
 # exit status of an explicit exit passes through the cleanup trap
 run_case tmp_exit "enable_strict_traps
 make_temp_file t

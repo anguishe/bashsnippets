@@ -79,7 +79,7 @@ source "$(dirname "${BASH_SOURCE[0]}")/bashlib-starter.sh"
 enable_strict_traps
 require_cmd curl timeout
 acquire_lock
-make_temp_file tmp
+tmp="$(make_temp_file)"
 run_with_timeout 30 curl -fsS https://example.com -o "$tmp"
 log INFO "fetched $(wc -c < "$tmp") bytes"
 ```
