@@ -15,6 +15,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 
 | Script | What breaks without it | Explained |
 |--------|------------------------|-----------|
+| [`argument-list-too-long.sh`](scripts/argument-list-too-long.sh) | `rm ./*.log` on 200,000 files dies with "Argument list too long" and deletes nothing. | [Read](https://bashsnippets.xyz/snippets/argument-list-too-long) |
 | [`automated-file-backup.sh`](scripts/automated-file-backup.sh) | Deleted or disk-failed data is gone with no undo. | [Read](https://bashsnippets.xyz/snippets/automated-file-backup) |
 | [`bash-argument-parsing.sh`](scripts/bash-argument-parsing.sh) | A flag read as a value deploys to nowhere, silently. | [Read](https://bashsnippets.xyz/snippets/bash-argument-parsing) |
 | [`bash-arrays.sh`](scripts/bash-arrays.sh) | One space in a list item silently splits it in two. | [Read](https://bashsnippets.xyz/snippets/bash-arrays) |
@@ -44,11 +45,15 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`find-duplicate-files.sh`](scripts/find-duplicate-files.sh) | Duplicate copies waste gigabytes silently across archives. | [Read](https://bashsnippets.xyz/snippets/find-duplicate-files) |
 | [`find-ip-address-linux.sh`](scripts/find-ip-address-linux.sh) | A firewall rule or backup target built on the wrong IP locks you out or ships data elsewhere. | [Read](https://bashsnippets.xyz/snippets/find-ip-address-linux) |
 | [`find-large-files-linux.sh`](scripts/find-large-files-linux.sh) | Disk hits 100% and you can't find the culprit fast. | [Read](https://bashsnippets.xyz/snippets/find-large-files-linux) |
+| [`fix-bad-interpreter-crlf.sh`](scripts/fix-bad-interpreter-crlf.sh) | A script saved with CRLF endings dies with `/bin/bash^M: bad interpreter`, or runs with strict mode silently off. | [Read](https://bashsnippets.xyz/snippets/fix-bad-interpreter-crlf) |
+| [`journalctl-disk-usage-vacuum.sh`](scripts/journalctl-disk-usage-vacuum.sh) | An unconfigured systemd journal quietly holds up to 4G of disk. | [Read](https://bashsnippets.xyz/snippets/journalctl-disk-usage-vacuum) |
 | [`kill-process-on-port.sh`](scripts/kill-process-on-port.sh) | `EADDRINUSE` — something squats your port and blocks startup. | [Read](https://bashsnippets.xyz/snippets/kill-process-on-port) |
 | [`list-open-ports-linux.sh`](scripts/list-open-ports-linux.sh) | Unknown listening ports are the blind spot in a security audit. | [Read](https://bashsnippets.xyz/snippets/list-open-ports-linux) |
 | [`log-retention-cleanup.sh`](scripts/log-retention-cleanup.sh) | Dated backup folders nobody rotates fill the disk in the directories logrotate does not own. | [Read](https://bashsnippets.xyz/snippets/log-retention-cleanup) |
 | [`monitor-cpu-ram-usage.sh`](scripts/monitor-cpu-ram-usage.sh) | A runaway process pins CPU until the server stops responding. | [Read](https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage) |
 | [`mysql-database-backup.sh`](scripts/mysql-database-backup.sh) | A mistaken `DROP TABLE` destroys data with no undo. | [Read](https://bashsnippets.xyz/snippets/mysql-database-backup) |
+| [`no-space-left-on-device-inodes.sh`](scripts/no-space-left-on-device-inodes.sh) | Writes fail with "No space left on device" while `df -h` shows free space: the filesystem is out of inodes. | [Read](https://bashsnippets.xyz/snippets/no-space-left-on-device-inodes) |
+| [`port-listening-but-connection-refused.sh`](scripts/port-listening-but-connection-refused.sh) | A service bound to 127.0.0.1 answers on the box and refuses every other machine with "Connection refused". | [Read](https://bashsnippets.xyz/snippets/port-listening-but-connection-refused) |
 | [`ports-audit.sh`](scripts/ports-audit.sh) | A new listener appears on a server and nobody notices until it is in an incident report. | [Read](https://bashsnippets.xyz/snippets/ports-audit) |
 | [`quick-system-info-report.sh`](scripts/quick-system-info-report.sh) | Guessing server state during an outage costs response time. | [Read](https://bashsnippets.xyz/snippets/quick-system-info-report) |
 | [`restart-service-if-stopped.sh`](scripts/restart-service-if-stopped.sh) | A crashed service stays down for hours without a watchdog. | [Read](https://bashsnippets.xyz/snippets/restart-service-if-stopped) |
