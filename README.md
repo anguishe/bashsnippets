@@ -51,6 +51,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`journalctl-disk-usage-vacuum.sh`](scripts/journalctl-disk-usage-vacuum.sh) | An unconfigured systemd journal quietly holds up to 4G of disk. | [Read](https://bashsnippets.xyz/snippets/journalctl-disk-usage-vacuum) |
 | [`kill-process-on-port.sh`](scripts/kill-process-on-port.sh) | `EADDRINUSE` — something squats your port and blocks startup. | [Read](https://bashsnippets.xyz/snippets/kill-process-on-port) |
 | [`list-open-ports-linux.sh`](scripts/list-open-ports-linux.sh) | Unknown listening ports are the blind spot in a security audit. | [Read](https://bashsnippets.xyz/snippets/list-open-ports-linux) |
+| [`lsof-command-examples.sh`](scripts/lsof-command-examples.sh) | du says the disk has space, df says it is full: deleted files still held open keep every byte. | [Read](https://bashsnippets.xyz/snippets/lsof-command-examples) |
 | [`log-retention-cleanup.sh`](scripts/log-retention-cleanup.sh) | Dated backup folders nobody rotates fill the disk in the directories logrotate does not own. | [Read](https://bashsnippets.xyz/snippets/log-retention-cleanup) |
 | [`monitor-cpu-ram-usage.sh`](scripts/monitor-cpu-ram-usage.sh) | A runaway process pins CPU until the server stops responding. | [Read](https://bashsnippets.xyz/snippets/monitor-cpu-ram-usage) |
 | [`mysql-database-backup.sh`](scripts/mysql-database-backup.sh) | A mistaken `DROP TABLE` destroys data with no undo. | [Read](https://bashsnippets.xyz/snippets/mysql-database-backup) |
@@ -95,11 +96,12 @@ Every function is exercised on its failure path by [`lib/bashlib-starter.test.sh
 
 ## Explained on the site
 
-Three pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, a command reference you run interactively, and an error whose fix is quoting rather than a script. They live on the site, not in `scripts/`:
+Four pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, two command references you run interactively, and an error whose fix is quoting rather than a script. They live on the site, not in `scripts/`:
 
 - [Bash error handling with `set -euo pipefail`](https://bashsnippets.xyz/snippets/bash-error-handling)
 - [Kill a process by name with `pgrep` / `pkill`](https://bashsnippets.xyz/snippets/kill-a-process)
 - [Fix "unary operator expected": empty variables inside `[ ]`](https://bashsnippets.xyz/snippets/unary-operator-expected)
+- [ss command examples: `-tulpn`, filters and every column decoded](https://bashsnippets.xyz/snippets/ss-command-examples)
 
 ## Browser tools
 
