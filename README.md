@@ -43,6 +43,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`check-if-website-is-up.sh`](scripts/check-if-website-is-up.sh) | You learn the site is down from angry users. | [Read](https://bashsnippets.xyz/snippets/check-if-website-is-up) |
 | [`check-ssl-certificate-expiry.sh`](scripts/check-ssl-certificate-expiry.sh) | An expired certificate takes the site dark without warning. | [Read](https://bashsnippets.xyz/snippets/check-ssl-certificate-expiry) |
 | [`create-dated-folder.sh`](scripts/create-dated-folder.sh) | Untimestamped backup folders overwrite the previous run. | [Read](https://bashsnippets.xyz/snippets/create-dated-folder) |
+| [`cron-job-not-running.sh`](scripts/cron-job-not-running.sh) | A cron job that never runs, or fails, leaves no error you would see; output is discarded without an MTA. | [Read](https://bashsnippets.xyz/snippets/cron-job-not-running) |
 | [`delete-old-log-files.sh`](scripts/delete-old-log-files.sh) | Unmanaged logs fill `/var/log` until writes fail and services crash. | [Read](https://bashsnippets.xyz/snippets/delete-old-log-files) |
 | [`disk-space-warning.sh`](scripts/disk-space-warning.sh) | A silently full disk crashes writes with no heads-up. | [Read](https://bashsnippets.xyz/snippets/disk-space-warning) |
 | [`docker-remove-all-containers.sh`](scripts/docker-remove-all-containers.sh) | `docker rm $(docker ps -aq)` fails on an empty list, refuses running containers and keeps volumes without saying so. | [Read](https://bashsnippets.xyz/snippets/docker-remove-all-containers) |
