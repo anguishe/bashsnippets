@@ -42,6 +42,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`create-dated-folder.sh`](scripts/create-dated-folder.sh) | Untimestamped backup folders overwrite the previous run. | [Read](https://bashsnippets.xyz/snippets/create-dated-folder) |
 | [`delete-old-log-files.sh`](scripts/delete-old-log-files.sh) | Unmanaged logs fill `/var/log` until writes fail and services crash. | [Read](https://bashsnippets.xyz/snippets/delete-old-log-files) |
 | [`disk-space-warning.sh`](scripts/disk-space-warning.sh) | A silently full disk crashes writes with no heads-up. | [Read](https://bashsnippets.xyz/snippets/disk-space-warning) |
+| [`docker-remove-all-containers.sh`](scripts/docker-remove-all-containers.sh) | `docker rm $(docker ps -aq)` fails on an empty list, refuses running containers and keeps volumes without saying so. | [Read](https://bashsnippets.xyz/snippets/docker-remove-all-containers) |
 | [`docker-prune-cleanup.sh`](scripts/docker-prune-cleanup.sh) | Dead containers, images, and volumes eat disk unnoticed. | [Read](https://bashsnippets.xyz/snippets/docker-prune-cleanup) |
 | [`file-permissions-security.sh`](scripts/file-permissions-security.sh) | World-writable files let a compromised script overwrite your app. | [Read](https://bashsnippets.xyz/snippets/file-permissions-security) |
 | [`find-duplicate-files.sh`](scripts/find-duplicate-files.sh) | Duplicate copies waste gigabytes silently across archives. | [Read](https://bashsnippets.xyz/snippets/find-duplicate-files) |
@@ -96,12 +97,13 @@ Every function is exercised on its failure path by [`lib/bashlib-starter.test.sh
 
 ## Explained on the site
 
-Four pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, two command references you run interactively, and an error whose fix is quoting rather than a script. They live on the site, not in `scripts/`:
+Five pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, three command references you run interactively, and an error whose fix is quoting rather than a script. They live on the site, not in `scripts/`:
 
 - [Bash error handling with `set -euo pipefail`](https://bashsnippets.xyz/snippets/bash-error-handling)
 - [Kill a process by name with `pgrep` / `pkill`](https://bashsnippets.xyz/snippets/kill-a-process)
 - [Fix "unary operator expected": empty variables inside `[ ]`](https://bashsnippets.xyz/snippets/unary-operator-expected)
 - [ss command examples: `-tulpn`, filters and every column decoded](https://bashsnippets.xyz/snippets/ss-command-examples)
+- [AWK cheat sheet: columns, filters, sums, every line run for real](https://bashsnippets.xyz/snippets/awk-cheat-sheet)
 
 ## Browser tools
 
