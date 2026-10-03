@@ -19,6 +19,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`automated-file-backup.sh`](scripts/automated-file-backup.sh) | Deleted or disk-failed data is gone with no undo. | [Read](https://bashsnippets.xyz/snippets/automated-file-backup) |
 | [`bash-argument-parsing.sh`](scripts/bash-argument-parsing.sh) | A flag read as a value deploys to nowhere, silently. | [Read](https://bashsnippets.xyz/snippets/bash-argument-parsing) |
 | [`bash-arrays.sh`](scripts/bash-arrays.sh) | One space in a list item silently splits it in two. | [Read](https://bashsnippets.xyz/snippets/bash-arrays) |
+| [`bash-command-not-found.sh`](scripts/bash-command-not-found.sh) | "command not found" has six causes and one message; reinstalling fixes one of them. | [Read](https://bashsnippets.xyz/snippets/bash-command-not-found) |
 | [`bash-curl-api-requests.sh`](scripts/bash-curl-api-requests.sh) | curl exits 0 on HTTP 500, so a failed call poisons everything downstream. | [Read](https://bashsnippets.xyz/snippets/bash-curl-api-requests) |
 | [`bash-environment-variables.sh`](scripts/bash-environment-variables.sh) | A variable set but never exported is invisible to every child process — cron runs with an empty token. | [Read](https://bashsnippets.xyz/snippets/bash-environment-variables) |
 | [`bash-flock-single-instance.sh`](scripts/bash-flock-single-instance.sh) | Overlapping cron runs stack copies until the box falls over. | [Read](https://bashsnippets.xyz/snippets/bash-flock-single-instance) |
@@ -27,6 +28,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`bash-functions.sh`](scripts/bash-functions.sh) | `return` sets an exit code, not a string — data lost. | [Read](https://bashsnippets.xyz/snippets/bash-functions) |
 | [`bash-if-else-examples.sh`](scripts/bash-if-else-examples.sh) | The wrong test operator fails logic silently on odd input. | [Read](https://bashsnippets.xyz/snippets/bash-if-else-examples) |
 | [`bash-parse-json-jq.sh`](scripts/bash-parse-json-jq.sh) | grep on JSON breaks the moment the API reformats — and fails silently. | [Read](https://bashsnippets.xyz/snippets/bash-parse-json-jq) |
+| [`bash-permission-denied.sh`](scripts/bash-permission-denied.sh) | chmod +x fixes one Permission denied; noexec mounts and directory bits block the rest. | [Read](https://bashsnippets.xyz/snippets/bash-permission-denied) |
 | [`bash-read-file-line-by-line.sh`](scripts/bash-read-file-line-by-line.sh) | A missing final newline silently drops the last line. | [Read](https://bashsnippets.xyz/snippets/bash-read-file-line-by-line) |
 | [`bash-retry-with-backoff.sh`](scripts/bash-retry-with-backoff.sh) | One transient error kills a deploy you then re-run by hand. | [Read](https://bashsnippets.xyz/snippets/bash-retry-with-backoff) |
 | [`bash-sed-find-replace.sh`](scripts/bash-sed-find-replace.sh) | An unanchored `sed -i` across a tree rewrites substrings you never looked at. | [Read](https://bashsnippets.xyz/snippets/bash-sed-find-replace) |
@@ -93,10 +95,11 @@ Every function is exercised on its failure path by [`lib/bashlib-starter.test.sh
 
 ## Explained on the site
 
-Two pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, and a command reference you run interactively. They live on the site, not in `scripts/`:
+Three pages earn their place as full explainers rather than a single copy-paste script — a strict-mode pattern you add to *every* script, a command reference you run interactively, and an error whose fix is quoting rather than a script. They live on the site, not in `scripts/`:
 
 - [Bash error handling with `set -euo pipefail`](https://bashsnippets.xyz/snippets/bash-error-handling)
 - [Kill a process by name with `pgrep` / `pkill`](https://bashsnippets.xyz/snippets/kill-a-process)
+- [Fix "unary operator expected": empty variables inside `[ ]`](https://bashsnippets.xyz/snippets/unary-operator-expected)
 
 ## Browser tools
 
