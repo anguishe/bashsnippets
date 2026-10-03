@@ -19,6 +19,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`automated-file-backup.sh`](scripts/automated-file-backup.sh) | Deleted or disk-failed data is gone with no undo. | [Read](https://bashsnippets.xyz/snippets/automated-file-backup) |
 | [`bash-argument-parsing.sh`](scripts/bash-argument-parsing.sh) | A flag read as a value deploys to nowhere, silently. | [Read](https://bashsnippets.xyz/snippets/bash-argument-parsing) |
 | [`bash-arrays.sh`](scripts/bash-arrays.sh) | One space in a list item silently splits it in two. | [Read](https://bashsnippets.xyz/snippets/bash-arrays) |
+| [`bash-case-statement.sh`](scripts/bash-case-statement.sh) | A `*.gz` rule above `*.tar.gz` gunzips a tarball into one opaque `.tar`. | [Read](https://bashsnippets.xyz/snippets/bash-case-statement) |
 | [`bash-command-not-found.sh`](scripts/bash-command-not-found.sh) | "command not found" has six causes and one message; reinstalling fixes one of them. | [Read](https://bashsnippets.xyz/snippets/bash-command-not-found) |
 | [`bash-curl-api-requests.sh`](scripts/bash-curl-api-requests.sh) | curl exits 0 on HTTP 500, so a failed call poisons everything downstream. | [Read](https://bashsnippets.xyz/snippets/bash-curl-api-requests) |
 | [`bash-environment-variables.sh`](scripts/bash-environment-variables.sh) | A variable set but never exported is invisible to every child process — cron runs with an empty token. | [Read](https://bashsnippets.xyz/snippets/bash-environment-variables) |
@@ -26,6 +27,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`bash-for-loop-examples.sh`](scripts/bash-for-loop-examples.sh) | Looping over `ls` silently skips filenames with spaces. | [Read](https://bashsnippets.xyz/snippets/bash-for-loop-examples) |
 | [`bash-functions-arguments.sh`](scripts/bash-functions-arguments.sh) | A reused variable clobbers the caller and deletes the wrong dir. | [Read](https://bashsnippets.xyz/snippets/bash-functions-arguments) |
 | [`bash-functions.sh`](scripts/bash-functions.sh) | `return` sets an exit code, not a string — data lost. | [Read](https://bashsnippets.xyz/snippets/bash-functions) |
+| [`bash-heredoc.sh`](scripts/bash-heredoc.sh) | An unset variable in an unquoted heredoc ships `server_name ;` to production. | [Read](https://bashsnippets.xyz/snippets/bash-heredoc) |
 | [`bash-if-else-examples.sh`](scripts/bash-if-else-examples.sh) | The wrong test operator fails logic silently on odd input. | [Read](https://bashsnippets.xyz/snippets/bash-if-else-examples) |
 | [`bash-parse-json-jq.sh`](scripts/bash-parse-json-jq.sh) | grep on JSON breaks the moment the API reformats — and fails silently. | [Read](https://bashsnippets.xyz/snippets/bash-parse-json-jq) |
 | [`bash-permission-denied.sh`](scripts/bash-permission-denied.sh) | chmod +x fixes one Permission denied; noexec mounts and directory bits block the rest. | [Read](https://bashsnippets.xyz/snippets/bash-permission-denied) |
@@ -37,6 +39,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`bash-string-manipulation.sh`](scripts/bash-string-manipulation.sh) | `cut` returns the wrong field the moment the format shifts. | [Read](https://bashsnippets.xyz/snippets/bash-string-manipulation) |
 | [`bash-timeout-command.sh`](scripts/bash-timeout-command.sh) | A hung job never exits and never frees its lock. | [Read](https://bashsnippets.xyz/snippets/bash-timeout-command) |
 | [`bash-trap-cleanup.sh`](scripts/bash-trap-cleanup.sh) | A crash leaves temp files behind and publishes a half-written file. | [Read](https://bashsnippets.xyz/snippets/bash-trap-cleanup) |
+| [`bash-while-loop-examples.sh`](scripts/bash-while-loop-examples.sh) | `while ! check; do sleep 1; done` hangs forever when the service never comes up. | [Read](https://bashsnippets.xyz/snippets/bash-while-loop-examples) |
 | [`check-if-website-is-up.sh`](scripts/check-if-website-is-up.sh) | You learn the site is down from angry users. | [Read](https://bashsnippets.xyz/snippets/check-if-website-is-up) |
 | [`check-ssl-certificate-expiry.sh`](scripts/check-ssl-certificate-expiry.sh) | An expired certificate takes the site dark without warning. | [Read](https://bashsnippets.xyz/snippets/check-ssl-certificate-expiry) |
 | [`create-dated-folder.sh`](scripts/create-dated-folder.sh) | Untimestamped backup folders overwrite the previous run. | [Read](https://bashsnippets.xyz/snippets/create-dated-folder) |
@@ -62,6 +65,7 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`quick-system-info-report.sh`](scripts/quick-system-info-report.sh) | Guessing server state during an outage costs response time. | [Read](https://bashsnippets.xyz/snippets/quick-system-info-report) |
 | [`restart-service-if-stopped.sh`](scripts/restart-service-if-stopped.sh) | A crashed service stays down for hours without a watchdog. | [Read](https://bashsnippets.xyz/snippets/restart-service-if-stopped) |
 | [`rsync-remote-backup.sh`](scripts/rsync-remote-backup.sh) | A local-only backup dies with the machine. | [Read](https://bashsnippets.xyz/snippets/rsync-remote-backup) |
+| [`scp-command-examples.sh`](scripts/scp-command-examples.sh) | scp exits 0 without checking what arrived; a cut-off copy leaves a half file. | [Read](https://bashsnippets.xyz/snippets/scp-command-examples) |
 | [`search-files-for-text-grep.sh`](scripts/search-files-for-text-grep.sh) | Hunting a pattern by opening files by hand wastes time. | [Read](https://bashsnippets.xyz/snippets/search-files-for-text-grep) |
 | [`service-watchdog.sh`](scripts/service-watchdog.sh) | A hung service passes `is-active` and stays broken; a naive restart loop fires 60 alerts an hour. | [Read](https://bashsnippets.xyz/snippets/service-watchdog) |
 | [`ssh-key-setup-script.sh`](scripts/ssh-key-setup-script.sh) | Password SSH invites brute-force attacks on any exposed server. | [Read](https://bashsnippets.xyz/snippets/ssh-key-setup-script) |
