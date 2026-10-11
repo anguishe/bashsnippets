@@ -66,11 +66,17 @@ I got tired of digging the same scripts out of my own notes every time a disk fi
 | [`quick-system-info-report.sh`](scripts/quick-system-info-report.sh) | Guessing server state during an outage costs response time. | [Read](https://bashsnippets.xyz/snippets/quick-system-info-report) |
 | [`restart-service-if-stopped.sh`](scripts/restart-service-if-stopped.sh) | A crashed service stays down for hours without a watchdog. | [Read](https://bashsnippets.xyz/snippets/restart-service-if-stopped) |
 | [`rsync-remote-backup.sh`](scripts/rsync-remote-backup.sh) | A local-only backup dies with the machine. | [Read](https://bashsnippets.xyz/snippets/rsync-remote-backup) |
+| [`rust-coreutils-ubuntu.sh`](scripts/rust-coreutils-ubuntu.sh) | On Ubuntu 26.04 `ls` and `timeout` are Rust while `cp` may still be GNU, and nothing says which one a script ran. | [Read](https://bashsnippets.xyz/snippets/rust-coreutils-ubuntu) |
 | [`scp-command-examples.sh`](scripts/scp-command-examples.sh) | scp exits 0 without checking what arrived; a cut-off copy leaves a half file. | [Read](https://bashsnippets.xyz/snippets/scp-command-examples) |
 | [`search-files-for-text-grep.sh`](scripts/search-files-for-text-grep.sh) | Hunting a pattern by opening files by hand wastes time. | [Read](https://bashsnippets.xyz/snippets/search-files-for-text-grep) |
 | [`service-watchdog.sh`](scripts/service-watchdog.sh) | A hung service passes `is-active` and stays broken; a naive restart loop fires 60 alerts an hour. | [Read](https://bashsnippets.xyz/snippets/service-watchdog) |
 | [`ssh-key-setup-script.sh`](scripts/ssh-key-setup-script.sh) | Password SSH invites brute-force attacks on any exposed server. | [Read](https://bashsnippets.xyz/snippets/ssh-key-setup-script) |
 | [`ssh-run-remote-commands.sh`](scripts/ssh-run-remote-commands.sh) | A loop that ignores ssh exit codes reports done while three hosts never changed. | [Read](https://bashsnippets.xyz/snippets/ssh-run-remote-commands) |
+| [`start-request-repeated-too-quickly.sh`](scripts/start-request-repeated-too-quickly.sh) | "Start request repeated too quickly" hides the real crash behind the rate limit; raising the limit hides it longer. | [Read](https://bashsnippets.xyz/snippets/start-request-repeated-too-quickly) |
+| [`sudo-rs-afraid-cant-do-that.sh`](scripts/sudo-rs-afraid-cant-do-that.sh) | sudo-rs says "I'm afraid I can't do that" for a missing rule, a dropped rule and a one-character argument mismatch alike. | [Read](https://bashsnippets.xyz/snippets/sudo-rs-afraid-cant-do-that) |
+| [`sudo-rs-wildcards-not-allowed.sh`](scripts/sudo-rs-wildcards-not-allowed.sh) | sudo-rs drops sudoers rules it can't parse, so a nightly job that ran under sudo for years fails after the 26.04 upgrade. | [Read](https://bashsnippets.xyz/snippets/sudo-rs-wildcards-not-allowed) |
+| [`systemd-status-203-exec.sh`](scripts/systemd-status-203-exec.sh) | `status=203/EXEC` has five causes and `systemctl status` shows the same code for all of them. | [Read](https://bashsnippets.xyz/snippets/systemd-status-203-exec) |
+| [`uutils-vs-gnu-coreutils.sh`](scripts/uutils-vs-gnu-coreutils.sh) | A script that passed on GNU coreutils changes exit codes, stderr or output under Rust coreutils without failing loudly. | [Read](https://bashsnippets.xyz/snippets/uutils-vs-gnu-coreutils) |
 
 ## The bashlib starter
 
